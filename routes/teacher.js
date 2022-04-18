@@ -1,15 +1,15 @@
 const express = require("express");
 const router = express.Router();
 const assignment = require("../models/Assignment");
+const AssignmentQuestions = require("../models/Assignment");
+
 
 
 // add question
 router.post("/add_question", async (req, res) => {
   const q = new assignment({
-    AssignmentQuestions:[{
       question: req.body.question,
       answer: req.body.answer,
-    }]
   });
   try {
     const newquestion = await q.save();

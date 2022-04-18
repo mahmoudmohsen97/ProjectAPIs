@@ -1,21 +1,36 @@
 const mongoose = require("mongoose");
-
-const AssignmentSchema = mongoose.Schema({
-  AssignmentQuestions: [{
+// defining assignment Questions schema
+const AssignmentQuestionSchema = mongoose.Schema([
+  {
     question: {
       type: String,
-      required: true,
+      require: true,
     },
     answer: {
       type: String,
-      required: true,
+      require: true,
     },
-  }],
-
+    CreatedAt: {
+      type: Date,
+      default: () => Date.now(),
+    },
+  },
+]);
+// defining assignment schema
+const AssignmentSchema = mongoose.Schema({
+  Year: {
+    type: Number,
+    min: 1,
+    max: 6,
+    require: true,
+  },
   CreatedAt: {
     type: Date,
-    default: Date.now,
+    default: () => Date.now(),
   },
+  AssignmentQuestions: AssignmentQuestionSchema,
 });
 
 module.exports = mongoose.model("Assignment", AssignmentSchema);
+module.exports = mongoose.model("AssignmentQuestions", AssignmentQuestionSchema);
+
