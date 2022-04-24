@@ -1,20 +1,19 @@
-:root {
-    --main-color:#5d2057;
-    --main-padding:55px;
-
-}
 
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-     box-sizing: border-box;
+    box-sizing: border-box;
+    
 }
 
 
 body {
 
     font-family: 'Work Sans', sans-serif;
-    background-color: #F9F3F3;
+    padding:0px;
+    background-color: white;
+    height: 100%;
+    width: 100%;
 }
 
 
@@ -75,28 +74,21 @@ body {
 
 
 
-.content {
-    
-    padding: var(--main-padding)  0 ;
+
+.container {
+    display: flex;
+    justify-content: center;
     background-color: #DDDDDD;
-    height: 100%;
-    width: 100%;
-
-}
-
-.content .container {
-    display:flex;
-    justify-content:center;
     
-
 }
 
-.content .container form {
+.container form {
     flex-basis: 70%;
+    margin: 40px 0;
 }
 
-.content .container label  {
-    padding:20px;
+.container label {
+    padding: 20px;
     display: block;
     font-size: 30px;
     font-weight: 600;
@@ -107,7 +99,7 @@ body {
     position: relative;
 }
 
-.content .container label::before {
+.container label::before {
     content: "";
     position: absolute;
     width: 0;
@@ -126,8 +118,8 @@ body {
 
 
 
-.content .container form input {
-  
+.container form input {
+
     padding: 20px;
     border: 1px solid #DDDDDD;
     margin-bottom: 30px;
@@ -136,11 +128,11 @@ body {
     font-size: 20px;
     font-weight: bold;
     border-radius: 7px;
-    
+
 }
 
 
-.content .container form textarea {
+.container form textarea {
     padding: 20px;
     display: block;
     border: 1px solid #DDDDDD;
@@ -151,13 +143,12 @@ body {
     font-size: 20px;
     font-weight: bold;
     border-radius: 7px;
-  
+
 }
 
 
- 
-
-.content .container form input[type="submit"],.content .container form input[type=reset] {
+.container form input[type="submit"],
+.container form input[type=reset] {
     background: none;
     border: none;
     color: black;
@@ -173,40 +164,41 @@ body {
     width: 40%;
 }
 
-.content .container form input[type="submit"]:hover {
+.container form input[type="submit"]:hover {
     background-color: #2ec771;
 }
 
-.content .container form input[type=reset]:hover {
+.container form input[type=reset]:hover {
     background-color: #2ec771;
 }
 
 @media (max-width:767px) {
-    .content .container form input[type="submit"], 
-    .content .container form input[type=reset]{
+
+    .container form input[type="submit"],
+    .container form input[type=reset] {
         margin-left: 80px;
         width: 50%;
         padding: 15px 30px;
         font-size: 20px;
         font-weight: 400;
-        
+
     }
 
 }
 
-@media (max-width:767px) { 
-    .content .container form input[type=reset]:hover{
-      font-size: 20px;
-      text-align: center;
-      padding: 15px 35px ;
-        
+@media (max-width:767px) {
+    .container form input[type=reset]:hover {
+        font-size: 20px;
+        text-align: center;
+        padding: 15px 35px;
+
     }
 
 }
 
 
 .footer {
-    background-color: #F9F3F3;
+    background-color: #ffffff;
     color: black;
     padding: 25px 10px;
     display: flex;
@@ -215,9 +207,3 @@ body {
     font-size: 18px;
     font-weight: bold;
 }
-
-
-
-
-
-

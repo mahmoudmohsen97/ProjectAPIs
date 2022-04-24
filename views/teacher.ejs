@@ -13,13 +13,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/Test.css">
     <title>Testing</title>
+    <script src="javascripts\teacherscript.js"></script>
 </head>
 
 <body>
 
     <!-- start header -->
     <div class="header">
-        
+
         <div class="logo">
             <img src="images\logo222-removebg-preview.png">
         </div>
@@ -32,23 +33,22 @@
 
     <!-- start content -->
 
-    <div class="content">
-        <div class="container">
-            <form action="/teacher/add_question" method="post">
-                
-                <label >Question :  </label>
-                <input class="question" type="text" placeholder="Add The Question " name="question" required="true" autocomplete="off">
-                <textarea  class="answer"placeholder="Answer Here" name="answer" required="true"></textarea>
-                <input type="submit" value="Send">
-                <input class="add_que" type="reset" value="Addquestion">
-            </form>
-        </div>
+    <div class="container">
+        <form action="javascript:void(0);" id="frmdata" onsubmit="submitFormData(this)">
+            <input id="year"type="number" placeholder="add question year" name="year"
+                required="true" autocomplete="off">
+            <input id="question" class="question" type="text" placeholder="Add The Question " name="question"
+                required="true" autocomplete="off">
+            <textarea id="answer" class="answer" placeholder="Answer Here" name="answer" required="true"></textarea>      
+            <input type="submit" value="Send Assignment">
+            <input class="add_que" type="reset" value="Add Question">
+        </form>
     </div>
     <!-- End content -->
 
     <!-- start footer -->
     <div class="footer">
-        &copy; 2022  All Right Reserved
+        &copy; 2022 All Right Reserved
     </div>
     <!-- End footer -->
 
