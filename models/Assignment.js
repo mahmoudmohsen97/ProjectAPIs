@@ -5,28 +5,29 @@ const AssignmentSchema = mongoose.Schema({
   year: {
     type: Number,
     min: 1,
-    max: 6,
-    require: true,
+    max: 4,
+    required: true,
   },
   CreatedAt: {
     type: Date,
     default: () => Date.now(),
   },
-  AssignmentQuestions:[
+  AssignmentQuestions: [
     {
       question: {
         type: String,
-        require: true,
+        required: true,
       },
       answer: {
         type: String,
-        require: true,
+        required: true,
       },
       CreatedAt: {
         type: Date,
         default: () => Date.now(),
-      },
-  }],
+      }
+    },
+  ]
 });
 
 module.exports = mongoose.model("Assignment", AssignmentSchema);

@@ -6,6 +6,8 @@ const port =3000
 const app = express()
 const teachRouter = require('./routes/teacher');
 const studentRouter = require('./routes/student');
+const loginRouter = require('./routes/login');
+const Assignment= require('./models/Assignment')
 var path = require('path');
 
 
@@ -30,6 +32,8 @@ mongoose.connect(
 //import routes
 app.use('/teacher', teachRouter)
 app.use('/student', studentRouter)
+app.use('/login', loginRouter)
+
 
 
 //render teacher page
@@ -37,9 +41,17 @@ app.get("/teacher",(req, res)=>{
   res.render("teacher.ejs")
   console.log("teacher page rendered")
 });
-app.get("/student",(req, res)=>{
-  res.render("student.ejs")
+
+app.get("/student", async (req, res)=>{
+   const assignment = await  Assignment.find({},{AssignmentQuestions:1 ,_id:0})
+
+   console.log(assignment)
+  res.render("student.ejs",assignment)
   console.log("student page rendered")
+});
+app.get("/login",(req, res)=>{
+  res.render("login.ejs")
+  console.log("login page rendered")
 });
 
 

@@ -4,14 +4,12 @@ const assignment = require("../models/Assignment");
 
 // add question
 router.post("/add_question", async (req, res) => {
-  var AssignmentQuestionsArray = [];
-  AssignmentQuestionsArray.push({
-    question: req.body.question,
-    answer: req.body.answer,
-  });
   const q = new assignment({
     year: req.body.year,
-    AssignmentQuestions: AssignmentQuestionsArray,
+    AssignmentQuestions: [{
+      question: req.body.question,
+      answer: req.body.answer
+  }]
   });
   try {
     const newquestion = await q.save();

@@ -1,16 +1,22 @@
-function submitFormData(event) {
-    task_finished = false;
-    // form values
-    var year = event.year.value;
+var AssignmentQuestionsParams=[]
+
+
+function resetFormData(event){
     var question = event.question.value;
     var answer = event.answer.value;
+    AssignmentQuestionsParams.push("question=" + question +"answer=" + answer)
+}
+
+function submitFormData(event) {
+    var year = event.year.value;
+    var yearparams = "year="+ year
+    // console.log(yearparams)
+    // console.log(AssignmentQuestionsParams)
     var http = new XMLHttpRequest();
     var url = "teacher/add_question";
-    var params="year=" + year + "&question=" + question +"&answer=" + answer; 
     http.open("POST", url, true);
-
     //Send the header information
     http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     // Send params with request
-    http.send(params);
+    http.send();
 }
