@@ -24,12 +24,14 @@
                 <img src="images/logo222-removebg-preview.png" alt="">
             </div class="text">
         </div>
+        <% for(var i=0;i<assignment.AssignmentQuestions.length;i++){ %> 
         <div class="question">
             <div class="card">
-                <h3 class="title_que"  id="QuestionHead"></h3>
+                <h3 class="title_que" id="QuestionHead"> <%= assignment%> </h3>
                 <textarea class="The_ans" rows="11" placeholder="Answer Here"></textarea>
             </div>
         </div>
+        <% } %> 
         <form action="">
             <div class="btn">
                 <button onclick="reset()">Clear Answers</button>
@@ -38,7 +40,7 @@
         </form>
 
     </div>
-    
+
 
     </div>
     </div>
