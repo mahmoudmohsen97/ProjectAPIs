@@ -16,7 +16,8 @@ function submitFormData(event) {
     var url = "teacher/add_question";
     http.open("POST", url, true);
     //Send the header information
-    http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    http.setRequestHeader("Content-type", "application/json");
     // Send params with request
-    http.send();
+    var requestBody = JSON.stringify({year:year,question:"QQQQ",answer:"aaa"})
+    http.send(requestBody);
 }
