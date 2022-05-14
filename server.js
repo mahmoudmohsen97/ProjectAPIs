@@ -45,7 +45,7 @@ app.get("/teacher",(req, res)=>{
 app.get("/student", async (req, res)=>{
    const assignment = await  Assignment.find({},{AssignmentQuestions:1 ,_id:0})
    console.log(assignment)
-  res.render("student.ejs",assignment)
+  res.render("student.ejs",{assignment})
   console.log("student page rendered")
 });
 app.get("/login",(req, res)=>{

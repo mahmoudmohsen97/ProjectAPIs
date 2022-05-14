@@ -24,10 +24,10 @@
                 <img src="images/logo222-removebg-preview.png" alt="">
             </div class="text">
         </div>
-        <% for(var i=0;i<assignment.AssignmentQuestions.length;i++){ %> 
+        <% for(var i=0;i<assignment[0].AssignmentQuestions.length;i++){ %> 
         <div class="question">
             <div class="card">
-                <h3 class="title_que" id="QuestionHead"> <%= assignment%> </h3>
+                <h3 class="title_que" id="QuestionHead"> <%= assignment[0].AssignmentQuestions[i].question %> </h3>
                 <textarea class="The_ans" rows="11" placeholder="Answer Here"></textarea>
             </div>
         </div>
