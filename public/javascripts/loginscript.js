@@ -1,8 +1,5 @@
 
-
-//labels Animation
-
-
+// labels Animation
 const labels = document.querySelectorAll(".form-control label");
 
 labels.forEach((label) => {
@@ -17,7 +14,7 @@ labels.forEach((label) => {
 
 let userInput = document.querySelector("[name='username']");
 let passwordInput = document.querySelector("[name='password']");
-//Form Validation
+// Form Validation
 document.forms[0].onsubmit = function (e) {
   let usernameValid = false;
   let passwordValid = false;
@@ -34,5 +31,4 @@ document.forms[0].onsubmit = function (e) {
     e.preventDefault();
   }
 };
-
 

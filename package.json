@@ -15,9 +15,9 @@
     "mongoose": "^6.2.5",
     "mongose": "^0.0.2-security",
     "nodemon": "^2.0.15",
+    "sweetalert2": "^11.4.14",
     "toast-notification-alert": "^1.0.5"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mahmoudmohsen09/APIs.git"
