@@ -5,7 +5,17 @@ const user = require("../models/users");
 
 router.get("/",(req, res)=>{
   res.render("teacher.ejs")
-  console.log("teacher page rendered")
+  console.log("/teacher page rendered")
+});
+
+router.get("/addassignment",(req, res)=>{
+  res.render("TeacherDasboard/AddAssignment.ejs")
+  console.log("teacher/AddAssignment page rendered")
+});
+
+router.get("/adduser",(req, res)=>{
+  res.render("TeacherDasboard/AddUser.ejs")
+  console.log("teacher/AddUser page rendered")
 });
 
 // add assignment to database

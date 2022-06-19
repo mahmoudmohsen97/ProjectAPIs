@@ -7,7 +7,7 @@ const UsersSchema = mongoose.Schema({
       required: true,
   },
   usertype:{
-    type:Boolean, //true for teacher and false for student
+    type:Boolean,
     required: true,
   },
   username: {
