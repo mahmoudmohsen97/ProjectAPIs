@@ -17,7 +17,7 @@ router.post("/auth", async (req, res) => {
     });
     console.log(userlogin);
     if (userlogin[0].usertype === false) {
-      res.redirect("/student")
+      res.redirect("/student?year="+userlogin[0].year)
     }
     if (userlogin[0].usertype === true) {
       res.redirect("/teacher");
