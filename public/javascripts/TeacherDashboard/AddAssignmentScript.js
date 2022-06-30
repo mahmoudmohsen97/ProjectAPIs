@@ -1,3 +1,4 @@
+// window.alert("gggggggggg");
 var AssignmentQuestionsParams = [];
 function resetFormData(event) {
   var question = event.question.value;
@@ -8,7 +9,7 @@ function resetFormData(event) {
 function submitFormData(event) {
   var year = event.year.value;
   var http = new XMLHttpRequest();
-  var url = "teacher/add_question";
+  var url = "/teacher/addassignment";
   http.open("POST", url, true);
   //Send the header information
   http.setRequestHeader("Content-type", "application/json");
@@ -17,5 +18,6 @@ function submitFormData(event) {
     year: year,
     AssignmentQuestions: AssignmentQuestionsParams,
   });
+  console.log(requestBody)
   http.send(requestBody);
 }
