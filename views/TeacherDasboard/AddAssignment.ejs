@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Render all Element -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="\css\TeacherDashboard\AddAssignmentStyle.css">
+    <script src="javascripts\TeacherDashboard\AddAssignmentScript.js"></script>
+
+
+</head>
+
+<body>
+
+
+    <!-- start header -->
+    <div class="header">
+
+        <div class="logo">
+            <img src="\images\logo222-removebg-preview.png">
+        </div>
+        <!-- <div class="logo1">Exam</div>
+        <div class="logo2">Exam</div> -->
+
+    </div>
+
+    <!-- End header -->
+
+    <!-- start content -->
+
+    <div class="container">
+        <form action="javascript:void(0);" id="frmdata" onsubmit="submitFormData(this)" onreset="resetFormData(this)">
+            <input class="year" type="number" placeholder="add question year" name="year" required="true" autocomplete="off"
+            min="1" max="4">
+            <input id="question" class="question" type="text" placeholder="Add The Question " name="question"
+                required="true" autocomplete="off">
+            <textarea id="answer" class="answer" placeholder="Answer Here" name="answer" required="true"></textarea>
+            <input type="submit" value="Send Assignment">
+            <input class="add_que" type="reset" value="Add Question">
+        </form>
+    </div>
+    <!-- End content -->
+
+    <!-- start footer -->
+    <div class="footer">
+        &copy; 2022 All Right Reserved
+    </div>
+    <!-- End footer -->
+
+
+
+</body>
+
+</html>

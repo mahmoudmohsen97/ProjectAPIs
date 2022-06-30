@@ -5,20 +5,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/Loginstyle.css" />
-  <title> login page </title>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>   -->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+  <title> login page </title>
 </head>
 
 <body>
   <div class="container">
     <h1>Please Login</h1>
-    <form>
+    <form action="/login/auth" method="post">
       <div class="form-control">
-        <input type="text" required autocomplete="off" name="username" autofocus/>
+        <input type="text" required autocomplete="off" name="username" autofocus />
         <label>USERNAME</label>
       </div>
       <div class="form-control">
-        <input type="password" required autocomplete="off" name="password"/>
+        <input type="password" required autocomplete="off" name="password" />
         <label>PASSWORD</label>
       </div>
       <input type="submit" value="Login" class="btn">
@@ -26,4 +28,5 @@
   </div>
 </body>
 <script src="javascripts/loginscript.js"></script>
+
 </html>

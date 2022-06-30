@@ -25,9 +25,9 @@ const AssignmentSchema = mongoose.Schema({
       CreatedAt: {
         type: Date,
         default: () => Date.now(),
-      }
+      },
     },
-  ]
+  ],
 });
 
 module.exports = mongoose.model("Assignment", AssignmentSchema);
