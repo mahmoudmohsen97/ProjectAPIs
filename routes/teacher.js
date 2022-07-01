@@ -19,21 +19,21 @@ router.get("/adduser",(req, res)=>{
 });
 
 // add assignment to database
-router.post("/add_question", async (req, res) => {
+router.post("/addassignment", async (req, res) => {
   const new_assignment = new assignment({
     year: req.body.year,
     AssignmentQuestions: req.body.AssignmentQuestions,
   });
   try {
     const NewAssignment = await new_assignment.save();
-    res.redirect("/teacher");
+    res.redirect("/addassignment");
     console.log(
-      "new question is : \n -----------------------------  \n ",
+      "new assignment is : \n -----------------------------  \n ",
       NewAssignment
     );
   } catch (err) {
     console.log(err);
-    res.redirect("/teacher");
+    res.redirect("/addassignment");
   }
 });
 
