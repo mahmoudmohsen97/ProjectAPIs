@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <title>TeacherDashboard</title>
+    <script>
+        function redirectToUrl(url) {
+            if (!url) return;
+            window.location = url
+        }
+    </script>
 
 </head>
 <body>
@@ -20,12 +26,12 @@
     </div>
 
     <div class="content">
-        <div>
-            <button class="first"> <i class="fa-solid fa-user"></i>  </button>
+        <div onclick="redirectToUrl('/teacher/adduser')">
+            <button  class="first"> <i class="fa-solid fa-user"></i>  </button>
             <h3>Add User</h3>
         </div>
         
-        <div>
+        <div onclick="redirectToUrl('/teacher/addassignment')">
             <button class="second"><i class="fa-solid fa-book-open"></i> </button>
             <h3>Add assignment</h3>
         </div>
