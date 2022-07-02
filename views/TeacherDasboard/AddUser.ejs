@@ -12,6 +12,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="\css\TeacherDashboard\AddUserStyle.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/javascripts/TeacherDashboard/AddUserScript.js"></script>
+
 
 
 </head>
@@ -37,15 +40,17 @@
     <div class="container">
         <form action="javascript:void(0);" id="frmdata" onsubmit="submitFormData(this)" onreset="resetFormData(this)">
             <h1>ADD NEW STUDENT</h1>
-            <input list="usertypes" name="usertype" id="browser" placeholder="Choose User Type">
+            <input list="usertypes" name="usertype" placeholder="Choose User Type">
             <datalist id="usertypes">
                 <option value="Teacher">
                 <option value="Student">
             </datalist>
             <input class="year" type="number" placeholder="Student year" name="year" required="true" autocomplete="off"
                 min="1" max="4">
-            <input type="text" placeholder="user ID" name="username" required="true" autocomplete="off">
+            <input type="text" placeholder="user ID" name="userID" required="true" autocomplete="off">
             <input type="submit" value="ADD STUDENT">
+            <input type="reset" value="Reset">
+
         </form>
     </div>
     <!-- End content -->

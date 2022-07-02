@@ -38,23 +38,23 @@ router.post("/addassignment", async (req, res) => {
 });
 
 // add user to database
-router.post("/add_user", async (req, res) => {
+router.post("/adduser", async (req, res) => {
   const new_user = new user({
-    year: req.body.year,
+    year:req.body.year,
     usertype:req.body.usertype,
-    username: req.body.username,
-    password: req.body.password
+    username:req.body.username,
+    password:req.body.password
   });
   try {
     const NewUser = await new_user.save();
-    res.redirect("/teacher");
+    res.redirect("/adduser");
     console.log(
       "new user is : \n -----------------------------  \n ",
       NewUser
     );
   } catch (err) {
     console.log(err);
-    res.redirect("/teacher");
+    res.redirect("/adduser");
   }
 });
 

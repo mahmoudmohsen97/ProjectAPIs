@@ -1,5 +1,6 @@
 // window.alert("gggggggggg");
 var AssignmentQuestionsParams = [];
+
 function resetFormData(event) {
   var question = event.question.value;
   var answer = event.answer.value;
@@ -7,7 +8,10 @@ function resetFormData(event) {
 }
 
 function submitFormData(event) {
+  var question = event.question.value;
+  var answer = event.answer.value;
   var year = event.year.value;
+  AssignmentQuestionsParams.push({ question: question, answer: answer });
   var http = new XMLHttpRequest();
   var url = "/teacher/addassignment";
   http.open("POST", url, true);
