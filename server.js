@@ -7,6 +7,8 @@ const port =3000
 const teachRouter = require('./routes/teacher');
 const studentRouter = require('./routes/student');
 const loginRouter = require('./routes/login');
+
+const examComponent = require('./components/exam');
 var path = require('path');
 
 
@@ -27,9 +29,11 @@ mongoose.connect(
   .catch(e=>console.log(e));
 
 //import routes
+app.use('/exam', examComponent.Router)
 app.use('/teacher', teachRouter)
 app.use('/student', studentRouter)
 app.use('/login', loginRouter)
+
 
 
 

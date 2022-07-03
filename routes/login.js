@@ -21,7 +21,15 @@ router.post("/auth", async (req, res) => {
     }
     if (userlogin[0].usertype === true) {
       res.redirect("/teacher");
+    }else{
+      res.status(400).send({
+        message:"FAILURE"
+      })
     }
-  } catch (error) {}
+  } catch (error) {
+    res.status(400).send({
+      message:"FAILURE"
+    })
+  }
 });
 module.exports = router;

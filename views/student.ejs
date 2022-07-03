@@ -13,30 +13,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <title>Exam</title>
     <script src="javascripts/studentscript.js"></script>
+    <script src="javascripts/exam.js"></script>
 
 </head>
 
 <body>
     <div class="container">
-        <div class="header">
+        <form action="javascript:void(0);" method="post" id="examForm">
+            <div class="header">
 
-            <div class="logo">
-                <img src="images/logo222-removebg-preview.png" alt="">
-            </div class="text">
-        </div>
-        <% for(var i=0;i<assignment[0].AssignmentQuestions.length;i++){ %> 
-        <div class="question">
-            <div class="card">
-                <h3 class="title_que" id="QuestionHead"> <%= assignment[0].AssignmentQuestions[i].question %> </h3>
-                <textarea class="The_ans" rows="11" placeholder="Answer Here"></textarea>
+                <div class="logo">
+                    <img src="images/logo222-removebg-preview.png" alt="">
+                </div class="text">
             </div>
-        </div>
-        <% } %> 
-        <form action="">
-            <div class="btn">
-                <button onclick="reset()">Clear Answers</button>
-                <button onclick="send()">Next</button>
-            </div>
+            <% for(var i=0;i<assignment[0].AssignmentQuestions.length;i++){ %>
+                <div class="question">
+                    <div class="card">
+                        <h3 class="title_que" id="QuestionHead">
+                            <%= assignment[0].AssignmentQuestions[i].question %>
+                        </h3>
+                        <textarea name="name" class="The_ans" rows="11" placeholder="Answer Here"></textarea>
+                    </div>
+                </div>
+                <% } %>
+                    <h1>
+
+                    </h1>
+                    <div class="btn">
+                        <button onclick="reset()">Clear Answers</button>
+                        <button onclick="submitExam('<%- assignment[0]._id%> ')">Submit</button>
+                    </div>
         </form>
 
     </div>
