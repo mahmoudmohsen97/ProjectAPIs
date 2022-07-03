@@ -29,6 +29,7 @@
             <% for(var i=0;i<assignment[0].AssignmentQuestions.length;i++){ %>
                 <div class="question">
                     <div class="card">
+                        <span class="score-<%=i %>"></span>
                         <h3 class="title_que" id="QuestionHead">
                             <%= assignment[0].AssignmentQuestions[i].question %>
                         </h3>

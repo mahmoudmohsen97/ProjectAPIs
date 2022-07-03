@@ -13,16 +13,4 @@ router.get("/", async (req, res) => {
   console.log("student page rendered")
 });
 
-router.post("/exam", async (req, res) => {
-  const examId = ObjectId((req.body.id).trim());
-  const examAnswers = req.body.answers;
-  const assignment = await Assignment.findById({ _id: examId })
-  console.log(assignment);
-  examAnswers.forEach((studentAnswer,index) => {
-    console.log(index);
-    evaluateAnswer(studentAnswer,assignment.AssignmentQuestions[index].answer);
-  });
-  // return
-});
-
 module.exports = router;
